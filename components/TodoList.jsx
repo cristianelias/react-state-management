@@ -12,14 +12,14 @@ const TodoList = ({ todos, setTodos }) => {
   return (
     <div>
       <RenderToast />
-      <h1>List of todos</h1>
+      <h1>Todos</h1>
       {todos.map(({ id, text, done }, index) => (
         <li key={id}>
-          {index + 1}
           <Todo
             text={text}
             done={done}
             id={id}
+            index={index + 1}
             toggleTodoStatus={toggleTodoStatus}
           />
         </li>

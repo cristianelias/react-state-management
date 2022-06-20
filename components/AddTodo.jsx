@@ -18,7 +18,7 @@ const AddTodo = ({ setTodos, todos }) => {
     <div>
       <RenderToast />
 
-      <h1>Add a todo</h1>
+      <h1>Add todo</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();

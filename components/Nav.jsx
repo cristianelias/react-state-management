@@ -9,6 +9,9 @@ const StyledNav = styled.nav`
   gap: 35px;
   justify-content: center;
   align-items: center;
+  height: 80px;
+  background-color: #8be9fd;
+  color: #282a36;
 `;
 
 const Header = styled.header``;
@@ -18,7 +21,7 @@ const Nav = ({}) => {
     <Header>
       <StyledNav>
         <Link href="/">
-          <a>Home</a>
+          <a>Components passed as children props</a>
         </Link>
       </StyledNav>
     </Header>

@@ -13,18 +13,31 @@ const App = styled.div`
 const Home = () => {
   return (
     <App>
-      <Parent id={"App"}>
-        <TodoControls />
-        <Parent id={1}>
-          <Parent id={2}>
-            <Parent id={"A"}></Parent>
-            <Parent id={"B"}></Parent>
-            <Parent id={"C"}>
-              <Parent id={"a"}></Parent>
+      <Parent id={"🐈"}>
+        <Parent id={"🦄"}>
+          <Parent id={"🦊"}>
+            <Parent id={"🐸"}></Parent>
+            <Parent id={"🐥"}></Parent>
+            <Parent id={"🐝"}></Parent>
+          </Parent>
+
+          <Parent id={"🐻"}>
+            <Parent id={"🦁"}></Parent>
+            <Parent id={"🐨"}>
+              <Parent id={"🐰"}></Parent>
+              <Parent id={"🐶"}></Parent>
+              <Parent id={"🐷"}></Parent>
             </Parent>
           </Parent>
-          <Parent id={3}>
-            <Parent id={"A"}></Parent>
+
+          <Parent id={"🐦"}>
+            <TodoControls />
+            <Parent id={"🐢"}></Parent>
+            <Parent id={"🦆"}>
+              <Parent id={"🐗"}></Parent>
+              <Parent id={"🐒"}></Parent>
+              <Parent id={"🐙"}></Parent>
+            </Parent>
           </Parent>
         </Parent>
       </Parent>

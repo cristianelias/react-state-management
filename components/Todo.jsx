@@ -1,18 +1,23 @@
+import styled from "@emotion/styled";
 import React from "react";
 import RenderToast from "./RenderToast";
 
-const Todo = ({ id, text, done, toggleTodoStatus }) => {
+const Text = styled.span`
+  text-decoration: ${({ done }) => (done ? "line-through" : "none")};
+`;
+
+const Todo = ({ id, text, done, toggleTodoStatus, index }) => {
   return (
-    <div>
+    <>
       <RenderToast />
 
-      <span>
-        {text} - {`Status: ${done ? "Done" : "Pending"}`}
-      </span>
+      <Text done={done}>
+        {index} - {text} {`( ${done ? "Done" : "Pending"} )`}
+      </Text>
       <button onClick={() => toggleTodoStatus({ id, text, done })}>
         {done ? "Mark as pending" : "Mark as done"}
       </button>
-    </div>
+    </>
   );
 };
 

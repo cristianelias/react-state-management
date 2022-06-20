@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import RenderToast from "../components/RenderToast";
 
 const Container = styled.div`
-  padding: 25px;
+  padding: 15px;
   background-color: #282a36;
-  border: 5px solid #f2fa8c;
+  border: 4px solid #f2fa8c;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
@@ -19,7 +19,7 @@ const Identity = styled.div`
   width: 100%;
   justify-content: center;
   text-align: center;
-  font-size: 18px;
+  font-size: 34px;
   font-weight: 800;
   color: #8be9fd;
 `;
@@ -34,6 +34,7 @@ const CounterContainer = styled.div`
 
 const Button = styled.button`
   padding: 20px;
+  font-size: 28px;
   background-color: inherit;
   border: none;
   cursor: pointer;
@@ -45,6 +46,7 @@ const Button = styled.button`
 
 const CounterValue = styled.div`
   color: #4ffb7b;
+  font-size: 28px;
 `;
 
 const ChildrenContainer = styled.div`
@@ -69,7 +71,7 @@ const Parent = ({ children, id }) => {
         <CounterValue>{counter}</CounterValue>
         <Button onClick={decreaseCounter}>⬇️</Button>
       </CounterContainer>
-      <ChildrenContainer>{children}</ChildrenContainer>
+      {children && <ChildrenContainer>{children}</ChildrenContainer>}
     </Container>
   );
 };

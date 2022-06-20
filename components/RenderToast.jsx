@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import React from "react";
 
 const Toast = styled.div`
+  float: right;
+
   @keyframes spooky {
     0% {
       opacity: 0;
