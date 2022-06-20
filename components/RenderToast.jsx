@@ -2,22 +2,31 @@ import styled from "@emotion/styled";
 import React from "react";
 
 const Toast = styled.div`
-  float: right;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%, 0);
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 6px;
+  width: 150px;
 
   @keyframes spooky {
     0% {
-      opacity: 0;
+      visibility: visible;
     }
     50% {
-      opacity: 1;
-      transform: translateY(-4px);
+      top: -5px;
+    }
+    99% {
+      top: -10px;
     }
     100% {
-      opacity: 0;
-      transform: translateY(-8px);
+      visibility: hidden;
     }
   }
-  animation: spooky 0.8s linear forwards;
+  animation: spooky 1s linear forwards;
 `;
 
 const RenderToast = () => <Toast key={Math.random()}>🔥 Render 🔥</Toast>;

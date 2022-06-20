@@ -4,27 +4,15 @@ import AddTodo from "./AddTodo";
 import TodoList from "./TodoList";
 import { v4 as uuid } from "uuid";
 import RenderToast from "./RenderToast";
+import Container from "./styled/Container";
 
 const todosInitialState = [
   {
     id: uuid(),
-    text: "Understand React state",
+    text: "Understand React state management",
     done: true,
   },
 ];
-
-const Container = styled.div`
-  padding: 25px;
-  background-color: #282a36;
-  border: 5px solid #f2fa8c;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  color: #fe79c6;
-`;
 
 const TodoControls = ({}) => {
   const [todos, setTodos] = useState(todosInitialState);
@@ -33,7 +21,7 @@ const TodoControls = ({}) => {
     <Container>
       <RenderToast />
       <AddTodo setTodos={setTodos} todos={todos} />
-      <TodoList setTodos={setTodos} todos={todos} />{" "}
+      <TodoList setTodos={setTodos} todos={todos} />
     </Container>
   );
 };

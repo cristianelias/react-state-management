@@ -1,66 +1,15 @@
-import styled from "@emotion/styled";
 import React, { useState } from "react";
 import RenderToast from "../components/RenderToast";
-
-const Container = styled.div`
-  padding: 15px;
-  background-color: #282a36;
-  border: 4px solid #f2fa8c;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  color: #fe79c6;
-`;
-
-const Identity = styled.div`
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  font-size: 34px;
-  font-weight: 800;
-  color: #8be9fd;
-`;
-
-const CounterContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 25px;
-  align-items: center;
-`;
-
-const Button = styled.button`
-  padding: 20px;
-  font-size: 28px;
-  background-color: inherit;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
-  }
-`;
-
-const CounterValue = styled.div`
-  color: #4ffb7b;
-  font-size: 28px;
-`;
-
-const ChildrenContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 25px;
-  flex-grow: 1;
-`;
+import Container from "./styled/Container";
+import Pouch from "./styled/Pouch";
+import Button from "./styled/Button";
+import Identity from "./styled/Identity";
+import CounterContainer from "./styled/CounterContainer";
+import CounterValue from "./styled/CounterValue";
+import useCounter from "./hooks/useCounter";
 
 const Parent = ({ children, id }) => {
-  const [counter, setCounter] = useState(0);
-  const increaseCounter = () => setCounter(counter + 1);
-  const decreaseCounter = () => setCounter(counter - 1);
+  const { counter, increaseCounter, decreaseCounter } = useCounter();
 
   return (
     <Container>
@@ -71,7 +20,7 @@ const Parent = ({ children, id }) => {
         <CounterValue>{counter}</CounterValue>
         <Button onClick={decreaseCounter}>⬇️</Button>
       </CounterContainer>
-      {children && <ChildrenContainer>{children}</ChildrenContainer>}
+      {children && <Pouch>{children}</Pouch>}
     </Container>
   );
 };

@@ -1,23 +1,60 @@
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 import React from "react";
 import RenderToast from "./RenderToast";
+import Button from "./styled/Button";
 
-const Text = styled.span`
-  text-decoration: ${({ done }) => (done ? "line-through" : "none")};
+const textDoneRules = css`
+  color: #8be9fd;
+  text-decoration: line-through;
 `;
 
-const Todo = ({ id, text, done, toggleTodoStatus, index }) => {
-  return (
-    <>
-      <RenderToast />
+const textPendingStyles = css`
+  color: #fe79c6;
+  text-decoration: none;
+`;
 
-      <Text done={done}>
-        {index} - {text} {`( ${done ? "Done" : "Pending"} )`}
-      </Text>
-      <button onClick={() => toggleTodoStatus({ id, text, done })}>
-        {done ? "Mark as pending" : "Mark as done"}
-      </button>
-    </>
+const Text = styled.span`
+  ${({ done }) => (done ? textDoneRules : textPendingStyles)};
+`;
+
+const Status = styled.span`
+  color: #f2fa8c;
+  text-decoration: none;
+`;
+
+const Separator = styled.span`
+  color: #4ffb7b;
+`;
+
+const ButtonsContainer = styled.div`
+  display: flex;
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+`;
+
+const Todo = ({ id, text, done, toggleTodoStatus, deleteTodo }) => {
+  return (
+    <Wrapper>
+      <RenderToast />
+      <span>
+        <Status>{`[ ${done ? "✅" : "⏳"} ]`}</Status>
+        <Separator>{" - "}</Separator>
+        <Text done={done}>{text}</Text>
+      </span>
+      <ButtonsContainer>
+        <Button onClick={() => toggleTodoStatus({ id, text, done })}>
+          Toggle
+        </Button>
+        <Button onClick={() => deleteTodo(id)}>Delete</Button>
+      </ButtonsContainer>
+    </Wrapper>
   );
 };
 

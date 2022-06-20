@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import Link from "next/link";
 import React from "react";
+import LinkTo from "../LinkTo/LinkTo";
 
 const StyledNav = styled.nav`
   width: 100%;
@@ -20,9 +20,11 @@ const Nav = ({}) => {
   return (
     <Header>
       <StyledNav>
-        <Link href="/">
-          <a>Components passed as children props</a>
-        </Link>
+        <LinkTo path="/" text="Components passed as children props" />
+        <LinkTo
+          path="/nested"
+          text="Components importing and rendering other components"
+        />
       </StyledNav>
     </Header>
   );
