@@ -9,6 +9,7 @@ import CounterValue from "../styled/CounterValue";
 import useCounter from "../hooks/useCounter";
 import Fox from "./Fox";
 import Chicken from "./Chicken";
+import Bird from "./Bird";
 
 const Unicorn = () => {
   const { counter, increaseCounter, decreaseCounter } = useCounter();
@@ -25,6 +26,7 @@ const Unicorn = () => {
       <Pouch>
         <Fox />
         <Chicken />
+        <Bird />
       </Pouch>
     </Container>
   );

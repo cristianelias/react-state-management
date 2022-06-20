@@ -6,6 +6,10 @@ import { v4 as uuid } from "uuid";
 import RenderToast from "./RenderToast";
 import Container from "./styled/Container";
 
+const Title = styled.h1`
+  color: #4ffb7b;
+`;
+
 const todosInitialState = [
   {
     id: uuid(),
@@ -20,6 +24,7 @@ const TodoControls = ({}) => {
   return (
     <Container>
       <RenderToast />
+      <Title>Todo Controls</Title>
       <AddTodo setTodos={setTodos} todos={todos} />
       <TodoList setTodos={setTodos} todos={todos} />
     </Container>

@@ -8,13 +8,13 @@ import CounterContainer from "../styled/CounterContainer";
 import CounterValue from "../styled/CounterValue";
 import useCounter from "../hooks/useCounter";
 
-const Fox = () => {
+const Turtle = () => {
   const { counter, increaseCounter, decreaseCounter } = useCounter();
 
   return (
     <Container>
       <RenderToast />
-      <Identity>🦊</Identity>
+      <Identity>🐢</Identity>
       <CounterContainer>
         <Button onClick={increaseCounter}>⬆️</Button>
         <CounterValue>{counter}</CounterValue>
@@ -24,4 +24,4 @@ const Fox = () => {
   );
 };
 
-export default Fox;
+export default Turtle;

@@ -20,7 +20,6 @@ const Rabbit = () => {
         <CounterValue>{counter}</CounterValue>
         <Button onClick={decreaseCounter}>⬇️</Button>
       </CounterContainer>
-      <Pouch></Pouch>
     </Container>
   );
 };

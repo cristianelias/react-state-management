@@ -7,21 +7,27 @@ import Identity from "../styled/Identity";
 import CounterContainer from "../styled/CounterContainer";
 import CounterValue from "../styled/CounterValue";
 import useCounter from "../hooks/useCounter";
+import TodoControls from "../TodoControls";
+import Turtle from "./Turtle";
 
-const Fox = () => {
+const Bird = () => {
   const { counter, increaseCounter, decreaseCounter } = useCounter();
 
   return (
     <Container>
       <RenderToast />
-      <Identity>🦊</Identity>
+      <Identity>🐦</Identity>
       <CounterContainer>
         <Button onClick={increaseCounter}>⬆️</Button>
         <CounterValue>{counter}</CounterValue>
         <Button onClick={decreaseCounter}>⬇️</Button>
       </CounterContainer>
+      <Pouch>
+        <TodoControls />
+        <Turtle />
+      </Pouch>
     </Container>
   );
 };
 
-export default Fox;
+export default Bird;
