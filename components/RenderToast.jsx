@@ -26,6 +26,7 @@ const Toast = styled.div`
       visibility: hidden;
     }
   }
+
   animation: spooky 1s linear forwards;
 `;
 

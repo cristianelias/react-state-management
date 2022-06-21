@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const Identity = styled.div`
+const Identity = styled.span`
   width: 100%;
   justify-content: center;
   text-align: center;

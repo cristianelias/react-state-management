@@ -23,6 +23,6 @@ const Parent = ({ children, id }) => {
       {children && <Pouch>{children}</Pouch>}
     </Container>
   );
-};
+};;
 
 export default Parent;

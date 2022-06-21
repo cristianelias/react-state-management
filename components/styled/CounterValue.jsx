@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const CounterValue = styled.div`
+const CounterValue = styled.span`
   color: #4ffb7b;
   font-size: 28px;
   min-width: 36px;

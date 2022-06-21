@@ -26,6 +26,7 @@ const Nav = ({}) => {
           path="/nested"
           text="Components importing and rendering other components"
         />
+        <LinkTo path="/children" text="Children demo" />
       </StyledNav>
     </Header>
   );

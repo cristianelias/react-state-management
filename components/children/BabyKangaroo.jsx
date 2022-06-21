@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import RenderToast from "../RenderToast";
 import Container from "../styled/Container";
 import Button from "../styled/Button";
@@ -7,13 +7,13 @@ import CounterContainer from "../styled/CounterContainer";
 import CounterValue from "../styled/CounterValue";
 import useCounter from "../hooks/useCounter";
 
-const Fox = () => {
+const BabyKangaroo = ({ name }) => {
   const { counter, increaseCounter, decreaseCounter } = useCounter();
 
   return (
     <Container>
       <RenderToast />
-      <Identity>🦊</Identity>
+      <Identity>🦘 {name}</Identity>
       <CounterContainer>
         <Button onClick={increaseCounter}>⬆️</Button>
         <CounterValue>{counter}</CounterValue>
@@ -23,4 +23,4 @@ const Fox = () => {
   );
 };
 
-export default Fox;
+export default BabyKangaroo;
