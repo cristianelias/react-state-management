@@ -29,6 +29,7 @@ const Separator = styled.span`
 
 const ButtonsContainer = styled.div`
   display: flex;
+  gap: 20px;
 `;
 
 const Wrapper = styled.div`
@@ -36,7 +37,7 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 15px;
+  gap: 25px;
 `;
 
 const Todo = ({ id, text, done, toggleTodoStatus, deleteTodo }) => {

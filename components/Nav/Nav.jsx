@@ -6,10 +6,11 @@ const StyledNav = styled.nav`
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 35px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  flex-wrap: wrap;
+  padding: 20px;
   background-color: #8be9fd;
   color: #282a36;
 `;
